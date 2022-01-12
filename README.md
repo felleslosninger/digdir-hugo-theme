@@ -1,0 +1,1 @@
+# digdir-hugo-theme
