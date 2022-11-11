@@ -1,12 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:500,400,300');
 
 html {
-    font-size: 100%;
+    font-size: 18px;
 }
 
 body {
     background: white;
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.75;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 3rem 0 1.38rem;
+    margin-bottom: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: $color-neutral-grey-800;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6111rem;
+}
+
+p,
+li {
+    font-size: 1rem;
+}
+
+small,
+.text_small {
+    font-size: 0.889rem;
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 100%;
+    }
 }

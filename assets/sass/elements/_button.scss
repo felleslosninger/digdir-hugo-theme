@@ -1,0 +1,18 @@
+.button {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--primary {
+        background-color: #0062b8;
+        color:white!important;
+
+        &:hover {
+            background-color: #0069d9;
+        }
+    }
+}

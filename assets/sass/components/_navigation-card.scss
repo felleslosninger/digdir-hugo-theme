@@ -32,6 +32,10 @@
             position: absolute;
             bottom: 32px;
         }
+
+        &--second {
+            background-color: $color-brand-second-300!important;
+        }
     }
 
     &__img-container {
@@ -40,7 +44,6 @@
             width: auto;
             margin-bottom: 20px;
         }
-
     }
 
     &__title {
