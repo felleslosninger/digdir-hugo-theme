@@ -1,0 +1,68 @@
+// Importer
+@import '../../../node_modules/@digdir/ds-tokens/build/tokens.scss';
+
+.header {
+    padding-top: $spacing-base-8;
+    padding-bottom: $spacing-base-8;
+    border-bottom:1px solid $color-neutral-grey-200;
+
+    font-size: $font-size-500!important;
+    font-weight: 400;
+    letter-spacing: 0.02px;
+
+    &__logo {
+        height:30px;
+        margin-left:-1px;
+        image-rendering: auto;         /* Firefox */
+        image-rendering: auto;         /* Opera */
+        image-rendering: auto;/* Webkit (non-standard naming) */
+        image-rendering: auto;
+        -ms-interpolation-mode: auto;  /* IE (non-standard property) */
+    }
+
+    &__title {
+        height:30px!important;
+
+        a {
+            @extend .navbar-brand;
+            margin:unset;
+            padding:unset;
+
+        }
+
+        p {
+            margin:unset;
+        }
+    }
+
+    .navigation {
+        @extend .navbar;
+        @extend .navbar-expand-lg;
+        @extend .navbar-light;
+    
+        padding-top:0;
+        padding-bottom:0;
+
+        .navbar-nav {
+            @include tablet(){
+                padding-top: $spacing-base-8;
+            }
+        }
+    
+        &__items {
+            @extend .navbar-collapse;
+            @extend .flex-row-reverse;
+    
+            .nav-link {
+                font-size: $font-size-500!important;
+                padding:unset!important;
+                margin-left:35px;
+
+                @include tablet(){
+                    margin-top:10px;
+                    margin-bottom:10px;
+                }
+            }
+        }
+    }
+}

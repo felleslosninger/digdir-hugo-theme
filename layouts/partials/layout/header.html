@@ -1,0 +1,36 @@
+<header class="header">
+    <nav class="navigation">
+        <div class="container">
+            <div class="header__title">
+                <a href="/">
+                    <img class="header__logo" src="{{ .Site.Params.logo }}" alt="logo" />
+                </a>
+            </div>
+
+
+            <!--
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navigation__items">
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarToggler">
+
+                    {{ $currentPage := . }}
+                    {{ $section := .Site.GetPage $currentPage.Section }}
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        {{ range .Site.Menus.main }}
+                        <li class="nav-item">
+                            <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
+                                href="{{ .URL }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
+                        {{end}}
+                    </ul>
+                </div>
+            </div>
+            -->
+        </div>
+    </nav>
+</header>
