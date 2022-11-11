@@ -1,0 +1,61 @@
+.navigation-card {
+    height: 100%;
+
+    &:not(:last-of-type) {
+        padding-top: 50px;
+    }
+
+    &__link {
+        height: 100%;
+        border-radius: 8px;
+        border: 1px solid #bcbfc5;
+        color: $color-neutral-grey-800;
+        background-color: $color-brand-third-100;
+        padding: 40px 40px 72px 40px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+
+        &:hover {
+            border-color: $color-neutral-grey-800;
+            color: $color-neutral-grey-800;
+            background-color: $color-brand-third-200;
+        }
+
+        &::after {
+            @include font-awsome('\f061');
+            font-size: 30px;
+            position: absolute;
+            bottom: 32px;
+        }
+    }
+
+    &__img-container {
+        img {
+            height: 64px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__title {
+        font-size: $font-size-600;
+        font-weight: $font-weight-medium;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        margin-top: 8px;
+    }
+
+    &__desc {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}

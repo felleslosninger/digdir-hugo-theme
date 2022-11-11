@@ -1,8 +1,13 @@
 @import 'vendors/bootstrap.scss';
+@import 'vendors/digdir.scss';
 
 @import 'base/base';
 
 @import 'mixin/mixin';
 
 @import 'layout/layout';
+
+@import 'components/components';
+
+@import 'elements/elements';
 
