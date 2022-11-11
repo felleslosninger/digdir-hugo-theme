@@ -1,3 +1,18 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="robots" content="index,follow">
+
+<title itemprop="name">{{ .Title }}</title>
+<meta name="description" content="{{ .Params.description }}" />
+<meta name="keywords" content="{{ with .Site.Params.keywords }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}" />
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta name="og:description" content="{{ .Params.description }}" />
+<meta property="og:type" content="website" /> 
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="{{ .Site.Language }}">
+
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
