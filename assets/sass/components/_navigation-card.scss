@@ -28,13 +28,23 @@
 
         &::after {
             @include font-awsome('\f061');
-            font-size: 30px;
+            font-size: $font-size-600;
             position: absolute;
             bottom: 32px;
         }
 
         &--second {
-            background-color: $color-brand-second-300!important;
+            background-color: $color-brand-second-300 !important;
+
+            &:hover {
+                background-color:  $color-brand-second-400!important;
+            }
+        }
+
+        &--small {
+            &::after {
+                font-size: $font-size-500;
+            }
         }
     }
 
@@ -44,6 +54,12 @@
             width: auto;
             margin-bottom: 20px;
         }
+
+        &--small {
+            img {
+                height: 44px;
+            }
+        }
     }
 
     &__title {
@@ -52,13 +68,21 @@
         line-height: 1.4;
         margin-bottom: 1rem;
         margin-top: 8px;
+
+        &--small {
+            font-size: $font-size-500;
+        }
     }
 
     &__desc {
         margin-top: 0;
         margin-bottom: 1.5rem;
-        font-size: 1.125rem;
+        font-size: $font-size-400;
         font-weight: 400;
         line-height: 1.5;
+
+        &--small {
+            font-size: $font-size-300;
+        }
     }
 }

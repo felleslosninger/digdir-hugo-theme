@@ -1,0 +1,22 @@
+.banner {
+
+    
+
+    min-height: 300px;
+
+    &__image {
+        min-height: 300px!important;
+        max-height: 600px!important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+        @include tablet(){
+            max-height: 450px!important;
+        }
+
+        @include mobile(){
+            max-height: 400px!important;
+        }
+    }
+}
