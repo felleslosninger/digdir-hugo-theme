@@ -1,15 +1,25 @@
 .button {
     padding: 12px 30px;
     text-decoration: none;
-    border-radius: 8px;
+    color: black;
+
+    min-height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: 0.1s all;
+    border: 1px solid black;
+    font-weight: 400;
 
     &:hover {
         cursor: pointer;
+        color: inherit;
+        background-color: $color-brand-third-100;
     }
 
     &--primary {
         background-color: #0062b8;
-        color:white!important;
+        color: white !important;
 
         &:hover {
             background-color: #0069d9;

@@ -33,11 +33,11 @@
             bottom: 32px;
         }
 
-        &--second {
-            background-color: $color-brand-second-300 !important;
+        &--secondary {
+            background-color: $color-brand-second-200 !important;
 
             &:hover {
-                background-color:  $color-brand-second-400!important;
+                background-color:  $color-brand-second-300!important;
             }
         }
 
