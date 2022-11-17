@@ -1,0 +1,27 @@
+.divider {
+    .divider__title {
+        a {
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        h1,h2 {
+            margin-top:unset!important;
+        }
+    }
+
+    .divider__line {
+        width: 40px;
+        height: 4px;
+        margin: 20px auto 38px auto;
+        border-radius: 100px;
+        background-color: $color-brand-third-400;
+
+        &--secondary {
+            background-color: $color-brand-second-400 !important;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.language {
+    &__items {
+        text-decoration: none;
+        list-style: none;
+        margin:unset;
+        padding:unset;
+    }
+
+    &__item {
+
+        display: inline;
+
+        a {
+            text-decoration: none;
+            font-size: $font-size-400;
+            color:black;
+        }
+    }
+
+    .nb, .no {
+        &::before {
+            margin-right: 6px;
+            background-image: url("https://flagcdn.com/h20/no.png");
+            background-size: 20px 15px;
+            display: inline-block;
+            width: 20px; 
+            height: 15px;
+            content:"";
+        }
+    }
+
+    .en {
+        &::before {
+            margin-right: 6px;
+            background-image: url("https://flagcdn.com/h20/gb.png");
+            background-size: 20px 15px;
+            display: inline-block;
+            width: 20px; 
+            height: 15px;
+            content:"";
+        }
+    }
+
+}
