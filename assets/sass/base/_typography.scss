@@ -11,8 +11,12 @@ body {
     line-height: 1.75;
 }
 
-p {
+p, ol>li {
     margin-bottom: 1rem;
+}
+
+ul>li {
+    margin-top: .2rem;
 }
 
 h1,
