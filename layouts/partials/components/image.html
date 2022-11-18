@@ -1,5 +1,5 @@
 {{ $image := resources.GetMatch .image_input }}
-{{ $image_large := $image.Fill "600x400 q100" }}
-{{ $image_medium := $image.Fill "400x300 q100" }}
+{{ $image_large := $image.Resize "500x q100" }}
+{{ $image_medium := $image.Resize "300x q100" }}
 <img class="img-fluid" sizes="50vw" width="{{ $image_large.Width }}" height="{{ $image_large.Height }}"
 srcSet="{{$image_medium.RelPermalink}} 600w, {{$image_large.RelPermalink}} 800w "/>

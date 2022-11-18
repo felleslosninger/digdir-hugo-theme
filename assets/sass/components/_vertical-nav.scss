@@ -1,35 +1,36 @@
 .vertical-nav {
 
-    padding-left:50px;
-    .nav-item {
-        &:hover {
-            color: black;
-
-            &::before {
-                @include font-awsome('\f061');
-                font-size: $font-size-200;
-                position:absolute;
-                margin-top:5px;
-                margin-left:-50px;
-            }
-        }
-
+    li{
+        list-style: none;
     }
 
+    padding-left:20px;
+
     .nav-link {
-        color: #737373;
+        color: $color-neutral-grey-800;
         font-size: $font-size-400;
+
+        &::before {
+            @include font-awsome('\f054');
+            font-size: $font-size-200;
+            position:absolute;
+            margin-left:-20px;
+            margin-top:2px;
+        }
+
+        &:hover {
+            color: #0252be!important;
+            text-decoration: underline;
+        }
     }
 
     .active {
-        color: black!important;
-     
-        &::before {
-            @include font-awsome('\f061');
-            font-size: $font-size-200;
-            position:absolute;
-            margin-top:5px;
-            margin-left:-50px;
+        color: #0252be!important;
+        font-weight: 500;
+
+        &::marker {
+            color: #0252be!important;
+            font-weight: 500;
         }
     }
 }

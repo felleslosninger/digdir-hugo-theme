@@ -30,6 +30,8 @@
         }
         .nav-item {
 
+            margin-bottom: unset;
+
             @include tablet(){
                 margin-top:20px;
                 position: relative;
@@ -41,8 +43,6 @@
                     margin-top:4px;
                 }
             }
-
-
 
             .nav-link {
                 font-size: $font-size-400;
