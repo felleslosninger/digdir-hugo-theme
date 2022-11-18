@@ -1,0 +1,35 @@
+.vertical-nav {
+
+    padding-left:50px;
+    .nav-item {
+        &:hover {
+            color: black;
+
+            &::before {
+                @include font-awsome('\f061');
+                font-size: $font-size-200;
+                position:absolute;
+                margin-top:5px;
+                margin-left:-50px;
+            }
+        }
+
+    }
+
+    .nav-link {
+        color: #737373;
+        font-size: $font-size-400;
+    }
+
+    .active {
+        color: black!important;
+     
+        &::before {
+            @include font-awsome('\f061');
+            font-size: $font-size-200;
+            position:absolute;
+            margin-top:5px;
+            margin-left:-50px;
+        }
+    }
+}

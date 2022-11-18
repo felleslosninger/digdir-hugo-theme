@@ -1,3 +1,9 @@
 main {
     background-color: $color-neutral-grey-100;
 }
+
+aside {
+    .nav-link {
+        font-size: $font-size-500;
+    }
+}
