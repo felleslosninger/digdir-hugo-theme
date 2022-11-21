@@ -1,0 +1,56 @@
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("toTopBtn").style.display = "block";
+        } else {
+            document.getElementById("toTopBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+<style>
+    .to-top-btn {
+        position: fixed;
+        /* Fixed/sticky position */
+        bottom: 32px;
+        /* Place the button at the bottom of the page */
+        right: 32px;
+        /* Place the button 30px from the right */
+        z-index: 99;
+        /* Make sure it does not overlap */
+        display: none;
+        height: 66px;
+        width: 66px;
+        line-height: 66px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: white;
+        font-weight: 400;
+        transition: 0.4s all;
+        border: 2px solid black;
+    }
+
+    .to-top-btn span {
+        display: block;
+        color: black;
+        transition: 0.4s all;
+        font-size: 1.1rem;
+    }
+</style>
+
+<button class="to-top-btn" aria-label="Back to top" onclick="topFunction()" id="toTopBtn">
+    <span style="margin-top:-3px;font-size:2rem;" class="fa fa-chevron-up"></span>
+</button>

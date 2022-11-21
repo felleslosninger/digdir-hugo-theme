@@ -7,9 +7,17 @@
     padding-top: $spacing-8;
     padding-bottom: $spacing-8;
 
-    &--primary {
+    &--extra-spacing {
         padding-top: $spacing-8*2.7;
         padding-bottom: $spacing-8*2.7;  
+    }
+
+    &--bg-primary {
+        background-color: #a5d6fb!important;
+    }
+
+    &--bg-second {
+        background-color: #f5dda6!important;
     }
 
     &--no-bg {
