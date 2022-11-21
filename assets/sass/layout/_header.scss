@@ -23,6 +23,10 @@
 
     .navbar {
 
+        a {
+            display: inherit;
+        }
+
         .navbar-nav {
             @include tablet(){
                 margin-top:20px;
@@ -46,11 +50,20 @@
 
             .nav-link {
                 font-size: $font-size-400;
+                color: $color-neutral-grey-800;
                 padding:0px 18px;
 
                 @include tablet(){
                     padding:0px 28px;
                 }
+
+                &:hover {
+                    color: #0252be;
+                }
+            }
+
+            .active {
+                color: #0252be;
             }
         }
     }

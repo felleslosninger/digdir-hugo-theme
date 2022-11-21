@@ -2,18 +2,18 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
             
-                <a href="{{ .Site.Home.Permalink }}">
+                <a href="{{ .Site.Home.Permalink }}" style="margin-right: 50px;">
                     <img class="my-auto header__logo" src="{{ .Site.Params.logo }}" alt="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
                     {{ $currentPage := . }}
                     {{ $section := .Site.GetPage $currentPage.Section }}
 
-                    <ul class="mx-auto navbar-nav mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         {{ range sort .Site.Menus.main.ByWeight }}
                         <li class="nav-item">
                             <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
