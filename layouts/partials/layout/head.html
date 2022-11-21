@@ -5,7 +5,7 @@
 
 <title itemprop="name">{{ .Title }}</title>
 <meta name="description" content="{{ .Params.description }}" />
-<meta name="keywords" content="{{ with .Site.Params.keywords }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}" />
+<meta name="keywords" content="{{ with .Site.Params.global_keywords }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}" />
 
 <meta property="og:title" content="{{ .Title }}" />
 <meta name="og:description" content="{{ .Params.description }}" />
