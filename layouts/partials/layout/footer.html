@@ -50,15 +50,22 @@
                     {{$.Site.Data.Footer.col3.title}}
                 </h2>
                 <div class="footer__content">
+
+                    
+ 
+                   
+                   
                     <ul class="footer__links">
-                        {{ range $.Site.Data.Footer.col3.links }}
+                        {{ range sort .Site.Menus.main.ByWeight }}
                         <li>
-                            <a href="{{.url}}">
-                                {{.title}}
+                            <a href="{{ .URL }}">
+                                {{ .Name }}
                             </a>
                         </li>
                         {{end}}
+                   
                     </ul>
+                
                 </div>
             </div>
         </div>
