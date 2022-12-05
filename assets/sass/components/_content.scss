@@ -1,5 +1,5 @@
 .content__container {
     @include tablet(){
-        padding:$spacing-5 0;
+        padding:0 0 $spacing-5 0;
     }
 }
