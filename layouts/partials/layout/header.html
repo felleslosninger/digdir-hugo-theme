@@ -1,45 +1,43 @@
 <header class="header">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
-            
-                {{ with .Site.GetPage "/" }}
-                <a href="{{ .RelPermalink }}" style="margin-right: 50px;">
-                    <img class="my-auto header__logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="logo" />
-                </a>
-                {{ end }}
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
-                    {{ $currentPage := . }}
-                    {{ $section := .Site.GetPage $currentPage.Section }}
 
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        {{ range sort .Site.Menus.main.ByWeight }}
-                        <li class="nav-item">
-                            <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
-                                href="{{ .URL }}">
-                                {{ .Name }}
-                            </a>
-                        </li>
-                        {{end}}
-                    </ul>
+            {{ with .Site.GetPage "/" }}
+            <a href="{{ .RelPermalink }}" style="margin-right: 50px;">
+                <img class="my-auto header__logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="logo" />
+            </a>
+            {{ end }}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
+                {{ $currentPage := . }}
+                {{ $section := .Site.GetPage $currentPage.Section }}
 
-                    <div class="language">
-                        <div style="text-align: right;">
-                            <ul class="language__items">
-                                {{ range .Translations }}
-                                <li class="language__item">
-                                    <a href="{{.Permalink}}"
-                                        class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
-                                </li>
-                                {{end}}
-                            </ul>
-                        </div>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    {{ range sort .Site.Menus.main.ByWeight }}
+                    <li class="nav-item">
+                        <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
+                            href="{{ .URL }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{end}}
+                </ul>
+
+                <div class="language">
+                    <div style="text-align: right;">
+                        <ul class="language__items">
+                            {{ range .Translations }}
+                            <li class="language__item">
+                                <a href="{{.Permalink}}" class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
+                            </li>
+                            {{end}}
+                        </ul>
                     </div>
                 </div>
-    
+            </div>
         </nav>
     </div>
 </header>
