@@ -1,0 +1,16 @@
+.navigation__links {
+    margin: unset;
+    padding:unset;
+    list-style: none;
+    
+    li {
+
+        label {
+            &::before {
+                @include font-awsome('\f061');
+                font-size: $font-size-300;
+            }
+        }
+    }
+
+}
