@@ -1,0 +1,15 @@
+- id: contact
+  translation: "Kontakt"
+- id: about-the-website
+  translation: "Om nettstedet"
+- id: phone
+  translation: "Telefon"
+- id: contact-us
+  translation: "Kontakt oss"
+
+- id: about-digdir
+  translation: "Om Digitaliseringsdirektoratet"
+- id: work-with-us
+  translation: "Jobb hos oss"
+- id: digdir-blog
+  translation: "Digitaliseringsbloggen"

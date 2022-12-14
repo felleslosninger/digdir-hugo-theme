@@ -4,8 +4,8 @@
         background-color: white;
     }
 
-    padding-top: $spacing-8;
-    padding-bottom: $spacing-8;
+    padding-top: $spacing-6;
+    padding-bottom: $spacing-6;
 
     &--extra-spacing {
         padding-top: $spacing-8*2.7;
@@ -13,10 +13,14 @@
     }
 
     &--bg-primary {
+        padding-top: $spacing-8;
+        padding-bottom: $spacing-8;
         background-color: #a5d6fb!important;
     }
 
     &--bg-second {
+        padding-top: $spacing-8;
+        padding-bottom: $spacing-8;
         background-color: #f5dda6!important;
     }
 
