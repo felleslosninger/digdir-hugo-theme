@@ -1,12 +1,26 @@
 .alert {
+    border-radius: 0px;
 
+    &:last-of-type {
+        margin-bottom: 0px!important;
+    }
+
+    &-success {
+        background-color: $color-interface-success-light!important;
+        border:2px solid $color-interface-success;
+    }
+
+    &-danger {
+        background-color: $color-interface-error-light!important;
+        border:2px solid $color-interface-error;
+    }
     &-warning {
         background-color: $color-interface-warning-light!important;
-        border:1px solid $color-interface-warning;
+        border:2px solid $color-interface-warning;
     }
 
     &-info {
         background-color: $color-interface-interaction-light;
-        border: 1px solid $color-interface-interaction;
+        border:2px solid $color-interface-interaction;
     }
 }

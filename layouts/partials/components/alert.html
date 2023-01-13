@@ -1,0 +1,16 @@
+{{ range .alert.global_alert }}
+{{ if .enabled }}
+<div class="global-message-alert alert alert-{{ .type }} alert-dismissible mb-1 fade show px-0 d-none" name="{{ .name }}"
+    role="alert">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 position-relative">
+                <div style="margin-right:20px;">{{ .text | safeHTML }}</div>
+                <button onclick="hideAlert()" type="button" class="btn-close" style="padding:unset; top:7px;right:12px;"
+                    data-bs-dismiss="alert" aria-label="Close notification" name="{{ .name }}"></button>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ end }}
