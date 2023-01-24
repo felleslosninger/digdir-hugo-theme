@@ -1,6 +1,12 @@
 .alert {
     border-radius: 0px;
 
+    color: $color-neutral-grey-800!important;
+
+    a {
+        color: #09499f!important;
+    }
+
     &:last-of-type {
         margin-bottom: 0px!important;
     }
