@@ -18,11 +18,11 @@
     }
 
     &--primary {
-        background-color: #0062b8;
+        background-color: $primary-color;
         color: white !important;
 
         &:hover {
-            background-color: #0069d9;
+            background-color: $primary-color;
         }
     }
 
