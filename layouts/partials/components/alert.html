@@ -1,3 +1,15 @@
+{{/*
+    Usage: 
+    {{ $data := index .Site.Data .Site.Language.Lang }}
+    {{ partial "components/alert.html" (dict "context" . "alert" $data) }}
+
+    Data:
+      - enabled: true
+        name: 'pin-expires-alert-message-EN'
+        type: 'warning'
+        text: 'text'
+*/}}
+
 {{ range .alert.global_alert }}
 {{ if .enabled }}
 <div class="global-message-alert alert alert-{{ .type }} alert-dismissible mb-1 fade show px-0 d-none" name="{{ .name }}"
