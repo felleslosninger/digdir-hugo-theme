@@ -20,9 +20,10 @@
 
 <body>
 
+    {{ partial "accessibility/jump-to-content" }}
     {{ partial "layout/header.html" . }}
 
-    <main>
+    <main id="main-content">
         {{ block "main" . }}
         {{end}}
     </main>
@@ -53,15 +54,10 @@
     }
 
     function hideAlert(){
-        var target = event.target || event.srcElement;
-        
+        var target = event.target || event.srcElement;    
         console.log(target)
-        
         var name = target.getAttribute("name");
-
         console.log(name)
-
-
         sessionStorage.setItem(target.name, 1);
         console.log(sessionStorage.getItem(name))
     }
