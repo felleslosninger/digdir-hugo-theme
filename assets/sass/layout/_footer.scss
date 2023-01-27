@@ -52,6 +52,11 @@
 
     &__icons {
 
+        a {
+            color: $color-neutral-grey-400;
+            text-decoration: none;
+        }
+
         .icon {
             color:$color-neutral-grey-400;
             margin-right:10px;
