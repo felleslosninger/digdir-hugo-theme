@@ -13,7 +13,7 @@
 {{ range .alert.global_alert }}
 {{ if .enabled }}
 <div class="global-message-alert alert alert-{{ .type }} alert-dismissible mb-1 fade show px-0 d-none" name="{{ .name }}"
-    role="alert">
+    role="alert" aria-label="Alert">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 position-relative">
