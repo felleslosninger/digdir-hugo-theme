@@ -41,6 +41,14 @@
             }
         }
 
+        &--neutral {
+            background-color: white !important;
+
+            &:hover {
+                background-color: $color-brand-third-200!important;
+            }
+        }
+
         &--small {
             &::after {
                 font-size: $font-size-500;

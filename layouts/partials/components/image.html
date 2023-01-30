@@ -1,3 +1,13 @@
+{{/*
+    Usage: 
+    {{ partial "components/image.html" (dict "context" . "image" .image) }}
+
+    Data:
+    image:
+        src: /illustrations/illustration-03.png
+        alt: Illustrasjon av sittende figur med telefon i hånden
+*/}}
+
 {{ $image := resources.GetMatch .image.src }}
 {{ $image_large := $image.Resize "500x q100" }}
 {{ $image_medium := $image.Resize "300x q100" }}
