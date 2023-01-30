@@ -3,14 +3,15 @@
         <div class="row">
             <div class="col-lg-4">
                 <h2 class="footer__heading">
-                    {{$.Site.Data.Footer.col1.title}}
+                    Digitaliseringsdirektoratet
                 </h2>
                 <div class="footer__content">
                     <ul class="footer__links">
-                        {{ range $.Site.Data.Footer.col1.links }}
+                        {{ $data := index .Site.Data .Site.Language.Lang }}
+                        {{ range $data.footer.digdir }}
                         <li>
-                            <a href="{{.url}}">
-                                {{.title}}
+                            <a href="{{ .url }}">
+                                {{ .title }}
                             </a>
                         </li>
                         {{end}}
@@ -58,10 +59,11 @@
                 </h2>
                 <div class="footer__content">
                     <ul class="footer__links">
-                        {{ range sort .Site.Menus.main.ByWeight }}
+                        {{ $data := index .Site.Data .Site.Language.Lang }}
+                        {{ range $data.footer.about }}
                         <li>
-                            <a href="{{ .URL }}">
-                                {{ .Name }}
+                            <a href="{{ .url }}">
+                                {{ .title }}
                             </a>
                         </li>
                         {{end}}
