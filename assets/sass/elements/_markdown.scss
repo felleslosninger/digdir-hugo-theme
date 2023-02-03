@@ -3,8 +3,8 @@
         margin-top: unset;
     }
 
-    h1 + p {
-        font-size: 24px!important;
+    p:first-of-type {
+        font-size: $font-size-500!important;
     }
 
     ul, .alert {

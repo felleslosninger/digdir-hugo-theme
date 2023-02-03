@@ -1,17 +1,42 @@
 .navigation__links {
     margin: unset;
     margin-bottom: 50px;
-    padding:unset;
+    padding: unset;
     list-style: none;
-    
+
+    a {
+        text-decoration: none;
+        width:100%;
+        color: black;
+        &:hover {
+            color: black!important;
+        }
+    }
+
     li {
 
-        label {
-            &::before {
-                @include font-awsome('\f061');
-                font-size: $font-size-300;
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 8px;
+        position: relative;
+        padding-right: 25px;
+
+        background-color: $color-brand-second-200 !important;
+
+            &:hover {
+                cursor: pointer;
+                background-color:  $color-brand-second-300!important;
             }
+
+        &::after {
+            @include font-awsome('\f061');
+            font-size: $font-size-300;
+            position:absolute;
+            right:25px;
         }
+
+
+
     }
 
 }
