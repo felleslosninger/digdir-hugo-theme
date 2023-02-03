@@ -21,12 +21,12 @@
         position: relative;
         padding-right: 25px;
 
-        background-color: $color-brand-second-200 !important;
+        background-color: white !important;
 
-            &:hover {
-                cursor: pointer;
-                background-color:  $color-brand-second-300!important;
-            }
+        &:hover {
+            background-color: $color-brand-third-200!important;
+        }
+
 
         &::after {
             @include font-awsome('\f061');
