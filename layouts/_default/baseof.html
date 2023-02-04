@@ -5,16 +5,17 @@
 
     <title>
         {{ block "title" . }}
-        {{ if not .Page.IsHome }}
-        {{.Page.Title}} | {{ .Site.Title }}
-        {{ else }}
-        {{ .Site.Title }}
-        {{ end }}
+            {{ if not .Page.IsHome }}
+                {{.Page.Title}} | {{ .Site.Title }}
+            {{ else }}
+                {{ .Site.Title }}
+            {{ end }}
         {{ end }}
     </title>
 
+    {{ partial "seo/data-structure.html" . }}
+    {{ partial "seo/meta.html" . }}
     {{ partial "layout/head.html" . }}
-
 
 </head>
 
