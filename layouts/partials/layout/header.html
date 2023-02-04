@@ -7,7 +7,8 @@
 
             {{ with .Site.GetPage "/" }}
             <a href="{{ .RelPermalink }}" style="margin-right: 50px;">
-                <img class="my-auto header__logo" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="logo" />
+                <img class="my-auto header__logo" width="120" height="30"
+                    src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="logo" />
             </a>
             {{ end }}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
