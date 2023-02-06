@@ -1,0 +1,47 @@
+.figures {
+    top: auto;
+    //height: 325px;
+    height:280px;
+    bottom:48px!important;
+    position: absolute;
+
+    @include mobile(){
+        display: none;
+    }
+
+    svg {
+        height: 100%;
+    }
+
+    ellipse {
+        fill: #1e2b3c;
+    }
+
+    &--left {
+        left:-100px!important;
+        right: auto!important;
+    }
+
+    &--right {
+        right:-100px!important;
+        left: auto!important;
+    }
+
+    &--color-blue {
+        path {
+            fill: #1e98f5!important;
+        }
+    }
+
+    &--color-yellow {
+        path {
+            fill: #e5aa20!important;
+        }
+    }
+
+    &--color-red {
+        path {
+            fill: #f45f63!important;
+        }
+    }
+}

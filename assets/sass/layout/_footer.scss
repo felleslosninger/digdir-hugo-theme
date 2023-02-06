@@ -2,7 +2,7 @@
     background-color: $color-text-background-light;
     color: $color-neutral-white;
 
-    .row {
+    &.component {
         padding-top: $spacing-base-19;
         padding-bottom: $spacing-base-19;
     }

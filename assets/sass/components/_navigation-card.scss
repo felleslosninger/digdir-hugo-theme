@@ -4,11 +4,18 @@
     &:not(:last-of-type) {
         padding-top: 50px;
     }
+    
+    border:1px solid #bcbfc5;
+    border-radius: 8px;
+
+    &:hover {
+        border-color: transparent;
+    }
 
     &__content {
         height: 100%;
         border-radius: 8px;
-        border: 1px solid #bcbfc5;
+        border: 2px solid transparent;
         color: $color-neutral-grey-800;
         background-color: $color-brand-third-100;
         padding: 40px 40px 72px 40px;
@@ -21,6 +28,7 @@
         position: relative;
 
         &:hover {
+            border-width: 2px;
             border-color: $color-neutral-grey-800;
             color: $color-neutral-grey-800;
             background-color: $color-brand-third-200;
@@ -47,6 +55,12 @@
             &:hover {
                 background-color: $color-brand-third-200!important;
             }
+
+            &-secondary {
+                &:hover {
+                    background-color: $color-brand-second-200!important;
+                }
+            }
         }
 
         &--small {
@@ -58,14 +72,12 @@
 
     &__img-container {
         img {
-            height: 64px;
             width: auto;
             margin-bottom: 20px;
         }
 
         &--small {
             img {
-                height: 44px;
             }
         }
     }
