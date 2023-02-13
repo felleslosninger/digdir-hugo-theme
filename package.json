@@ -1,9 +1,6 @@
 {
   "dependencies": {
     "@digdir/ds-tokens": "^2.1.1",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "bootstrap": "^5.2.2",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0"
+    "bootstrap": "^5.2.2"
   }
 }
