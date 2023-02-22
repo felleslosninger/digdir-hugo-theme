@@ -22,7 +22,6 @@
     }
 
     li {
-
         border: 1px solid black;
         padding: 15px;
         border-radius: 8px;
@@ -35,16 +34,11 @@
             background-color: $color-brand-third-200;
         }
 
-
         &::after {
             @include font-awsome('\f061');
             font-size: $font-size-300;
             position:absolute;
             right:25px;
         }
-
-
-
     }
-
 }

@@ -1,10 +1,11 @@
 {{ $alert := index .Site.Data .Site.Language.Lang }}
+{{ if $alert }}
 {{ partial "components/alert.html" (dict "context" . "alert" $alert) }}
+{{ end }}
 
 <header class="header">
     <div class="container">
         <nav role="navigation" class="navbar navbar-expand-lg navbar-light p-0">
-
             {{ with .Site.GetPage "/" }}
             <a href="{{ .RelPermalink }}" style="margin-right: 50px;">
                 <img class="my-auto header__logo" width="120" height="30"

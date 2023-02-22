@@ -1,0 +1,13 @@
+{{ if .Params.meta }}
+<div class="d-flex gap-5">
+    {{ if .Params.date }}
+    <label class="mb-4">Publisert: {{.Params.date.Format "02. Jan 2006"}}</label>
+    {{ end }}
+    {{ if .Params.readtime }}
+    <label>Tid: {{.Params.readtime}}</label>
+    {{ end }}
+    {{ if .Params.author }}
+    <label>Forfatter: {{.Params.author}}</label>
+    {{ end }}
+</div>
+{{ end }}
