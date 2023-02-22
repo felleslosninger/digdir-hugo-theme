@@ -1,0 +1,30 @@
+.pagination {
+    justify-content: center;
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-5;
+
+    .page-item {
+        font-weight: 500;
+        margin-left: 4px;
+        margin-right: 4px;
+        border: none;
+        text-align: center;
+        width: 40px;
+
+        a {
+            border: none;
+            color: black;
+        }
+    }
+
+    .page-item.disabled {
+        display: none;
+    }
+
+    .page-item.active .page-link {
+        background-color: #0051be;
+        border-color: #0051be;
+        color: white;
+
+    }
+}

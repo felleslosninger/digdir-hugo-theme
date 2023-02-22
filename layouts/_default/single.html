@@ -1,18 +1,7 @@
 {{ define "main" }}
 
-<div class="component component--bg-primary">
-    <div class="container">
-        {{ partial "components/breadcrumb.html" . }}
-        <div class="row">
-            <div class="col-lg-7">
-                <h1 style="font-size:2.25rem;font-weight: 500;" class="mb-0">{{.Title}}</h1>
-                {{ with .Params.ingress }}
-                <p class="ingress mb-0" style="margin-top:1.5rem;">{{.}}</p>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-</div>
+{{ partial "components/banner.html" .}}
+
 <div class="component component--narrow">
     <div class="container">
         <div class="d-flex gap-3">
