@@ -1,13 +1,53 @@
 .markdown {
-    h2 {
-        margin-top: unset;
+
+    &> :first-child {
+        margin-top: 0 !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin-bottom: $spacing-2;
     }
 
     p:first-of-type {
-        font-size: $font-size-500!important;
+        font-size: $font-size-500 !important;
     }
 
-    ul, .alert {
+    ul,
+    .alert {
         margin-bottom: $spacing-4;
+    }
+
+    img {
+        width: 100%;
+        margin: $spacing-4 0;
+    }
+
+    img+.caption {
+        margin-top: -$spacing-3;
+        margin-bottom: $spacing-4;
+        color: #4a5562 !important;
+    }
+
+    .code {
+        margin: $spacing-4 0;
+        padding: 12px 20px;
+        border: 1px solid gray;
+        word-wrap: break-word;
+        box-decoration-break: clone;
+        border-radius: .2rem;
+    }
+
+    blockquote {
+        padding: 2rem;
+        margin: $spacing-4 0;
+        background-color: #e9f5ff;
+
+        p {
+            margin: unset;
+        }
     }
 }
