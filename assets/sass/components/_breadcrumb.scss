@@ -1,4 +1,9 @@
 .breadcrumb {
+
+    @include mobile(){
+        display: none;
+    }
+
     margin-bottom: 1.5rem;
     .active {
         color: black;
