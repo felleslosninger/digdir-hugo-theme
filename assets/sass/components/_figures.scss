@@ -4,9 +4,10 @@
     height:280px;
     bottom:48px!important;
     position: absolute;
+    display: none;
 
-    @include mobile(){
-        display: none;
+    @include largescreen(){
+        display: block;
     }
 
     svg {
