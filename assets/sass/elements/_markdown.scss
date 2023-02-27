@@ -10,7 +10,7 @@
     }
 
     img {
-        width: 100%;
+        max-width: 100%;
         margin: $spacing-4 0;
     }
 
@@ -21,12 +21,16 @@
     }
 
     .code {
-        margin: $spacing-4 0;
+        margin: $spacing-5 0;
         padding: 12px 20px;
         border: 1px solid gray;
         word-wrap: break-word;
         box-decoration-break: clone;
         border-radius: .2rem;
+        
+        code {
+            color:#7f1e4e!important;
+        }
     }
 
     blockquote {
@@ -36,6 +40,14 @@
 
         p {
             margin: unset;
+        }
+
+        ul:last-child {
+            margin-bottom: unset;
+
+            li:last-child {
+                margin-bottom: unset;
+            }
         }
     }
 }
