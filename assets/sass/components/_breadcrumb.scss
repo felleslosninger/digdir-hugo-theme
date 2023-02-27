@@ -1,11 +1,13 @@
 .breadcrumb {
 
+    a {
+        color: #063a7f!important;
+    }
+
     @include mobile(){
         display: none;
     }
 
     margin-bottom: 1.5rem;
-    .active {
-        color: black;
-    }
+
 }
