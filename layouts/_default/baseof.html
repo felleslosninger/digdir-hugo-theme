@@ -5,8 +5,8 @@
 
     <title>
         {{ block "title" . }}
-            {{ if not .Page.IsHome }}
-                {{.Page.Title}} | {{ .Site.Title }}
+            {{ if .Page.Title }}
+                {{ .Site.Title }} | {{.Page.Title}}
             {{ else }}
                 {{ .Site.Title }}
             {{ end }}
