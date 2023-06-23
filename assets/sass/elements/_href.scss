@@ -1,7 +1,0 @@
-main {
-    a[href*="https://"]::after {
-        @include font-awsome('\f08e');
-        font-size: $font-size-200;
-    }   
-}
-
