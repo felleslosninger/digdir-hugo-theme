@@ -20,8 +20,9 @@
                 {{ $currentPage := . }}
                 {{ $section := .Site.GetPage $currentPage.Section }}
 
+                {{ with .Site.Menus.main }}
                 <ul class="navbar-nav mb-2 mb-lg-0">
-                    {{ range sort .Site.Menus.main.ByWeight }}
+                    {{ range sort . "Weight" }}
                     <li class="nav-item">
                         <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
                             href="{{ .URL }}">
@@ -30,6 +31,7 @@
                     </li>
                     {{end}}
                 </ul>
+                {{ end }}
 
                 {{ if .Translations }}
                 <div class="language">
