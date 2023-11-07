@@ -111,4 +111,13 @@
             font-size: $font-size-300;
         }
     }
+
+    &--external {
+        &::after {
+            @include font-awsome('\f08e');
+            font-size: $font-size-600;
+            position: absolute;
+            bottom: 32px;
+        }
+    }
 }
