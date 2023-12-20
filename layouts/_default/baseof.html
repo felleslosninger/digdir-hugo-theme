@@ -5,11 +5,11 @@
 
     <title>
         {{ block "title" . }}
-            {{ if .Page.Title }}
-                {{ .Site.Title }} | {{.Page.Title}}
-            {{ else }}
-                {{ .Site.Title }}
-            {{ end }}
+        {{ if .Page.Title }}
+        {{ .Site.Title }} | {{.Page.Title}}
+        {{ else }}
+        {{ .Site.Title }}
+        {{ end }}
         {{ end }}
     </title>
 
@@ -36,36 +36,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
+    {{ partial "utils/custom-scripts.html" . }}
+    {{ partial "utils/global-message.html" . }}
 </body>
-
-
-<script>
-    function onLoad(){
-        var elements = document.getElementsByClassName("global-message-alert");
-        for (var i = 0; i < elements.length; i++) {
-            var name = elements[i].getAttribute("name");
-            
-            console.log("on load")
-            console.log(sessionStorage.getItem(name))
-
-            if(sessionStorage.getItem(name) == undefined){
-                elements[i].classList.remove("d-none");  
-            }
-        }
-    }
-
-    function hideAlert(){
-        var target = event.target || event.srcElement;    
-        console.log(target)
-        var name = target.getAttribute("name");
-        console.log(name)
-        sessionStorage.setItem(target.name, 1);
-        console.log(sessionStorage.getItem(name))
-    }
-
-    window.onload = onLoad();
-</script>
-
-{{ partial "utils/custom-scripts.html" . }}
 
 </html>

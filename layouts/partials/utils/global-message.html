@@ -1,0 +1,26 @@
+<script>
+    function onLoad() {
+        var elements = document.getElementsByClassName("global-message-alert");
+        for (var i = 0; i < elements.length; i++) {
+            var name = elements[i].getAttribute("name");
+
+            console.log("on load")
+            console.log(sessionStorage.getItem(name))
+
+            if (sessionStorage.getItem(name) == undefined) {
+                elements[i].classList.remove("d-none");
+            }
+        }
+    }
+
+    function hideAlert() {
+        var target = event.target || event.srcElement;
+        console.log(target)
+        var name = target.getAttribute("name");
+        console.log(name)
+        sessionStorage.setItem(target.name, 1);
+        console.log(sessionStorage.getItem(name))
+    }
+
+    window.onload = onLoad();
+</script>
