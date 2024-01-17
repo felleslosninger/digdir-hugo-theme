@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: scroll;
+
+    td {
+        padding: 8px;
+        border: 1px solid #ddd; /* Light border for columns */
+        color: black; /* Black text for cells */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f4f5f6;  
+    }
+
+    th {
+        background-color: #d2eafd; /* Light blue background for headers */
+        color: black; /* Black text for headers */
+        padding: 8px;
+        border: 1px solid #ddd; /* Light border for columns */
+        text-align: left; 
+    }
+}
