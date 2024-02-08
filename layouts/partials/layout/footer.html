@@ -10,7 +10,7 @@
                     <ul class="footer__links">
                         {{ $data := index .Site.Data .Site.Language.Lang }}
                         {{ range $data.footer.digdir }}
-                        <li>
+                        <li class="">
                             <a href="{{ .url }}">
                                 {{ .title }}
                             </a>
