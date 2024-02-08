@@ -20,6 +20,8 @@
         image-rendering: auto;
         -ms-interpolation-mode: auto;
         /* IE (non-standard property) */
+
+        object-fit: cover;
     }
 
     .navbar {
