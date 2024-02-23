@@ -11,9 +11,13 @@
                         {{ $data := index .Site.Data .Site.Language.Lang }}
                         {{ range $data.footer.digdir }}
                         <li class="">
+                            {{ if .url }}
                             <a href="{{ .url }}">
                                 {{ .title }}
                             </a>
+                            {{ else}}
+                            <label>{{.title}}</label>
+                            {{ end }}
                         </li>
                         {{end}}
                     </ul>
@@ -25,31 +29,21 @@
                     {{ i18n "contact" }}
                 </h2>
                 <div class="footer__content">
-                    <ul class="footer__links">
-                        <li>Digitaliseringsdirektoratet</li>
-                        <li>Org.nr. 991 825 827</li>
-                    </ul>
-                    <ul class="footer__links">
-                        <li>
-                            <a href="https://www.digdir.no/digdir/kontakt-oss/943">
-                                {{ i18n "contact-us"}}
-                            </a>
-                        </li>
-                        <li>{{ i18n "phone" }}: 22 45 10 00</li>
-                    </ul>
                     <div class="footer__icons mb-4">
-                        <a href="https://www.facebook.com/Digitaliseringsdirektoratet/">
-                            <i class="fa-facebook-f fab icon footer-icon--facebook" aria-hidden="true" tabindex="-1"
-                                title="Facebook"></i>
-                        </a>
-                        <a href="https://twitter.com/digdir_no">
-                            <i class="fa-twitter fab icon footer-icon--twitter" aria-hidden="true" tabindex="-1"
-                                title="Twitter"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/digitaliseringsdirektoratet">
-                            <i class="fa-linkedin fab icon footer-icon--linkedin" aria-hidden="true" tabindex="-1"
-                                title="LinkedIn"></i>
-                        </a>
+                        <ul class="footer__links">
+                            {{ $data := index .Site.Data .Site.Language.Lang }}
+                            {{ range $data.footer.contact }}
+                            <li>
+                                {{ if .url }}
+                                <a href="{{ .url }}">
+                                    {{ .title }}
+                                </a>
+                                {{ else}}
+                                <label>{{.title}}</label>
+                                {{ end }}
+                            </li>
+                            {{end}}
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -63,9 +57,13 @@
                         {{ $data := index .Site.Data .Site.Language.Lang }}
                         {{ range $data.footer.about }}
                         <li>
+                            {{ if .url }}
                             <a href="{{ .url }}">
                                 {{ .title }}
                             </a>
+                            {{ else}}
+                            <label>{{.title}}</label>
+                            {{ end }}
                         </li>
                         {{end}}
                     </ul>
