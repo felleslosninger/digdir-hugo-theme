@@ -16,36 +16,52 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
-                {{ $currentPage := . }}
-                {{ $section := .Site.GetPage $currentPage.Section }}
+            
+            <div class="collapse navbar-collapse d-lg-flex align-items-center" id="navbarNav">
+                
+                <div class="me-auto">
+                    {{ $currentPage := . }}
+                    {{ $section := .Site.GetPage $currentPage.Section }}
+                    {{ with .Site.Menus.main }}
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        {{ range sort . "Weight" }}
+                        <li class="nav-item">
+                            <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
+                                href="{{ .URL }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
+                        {{end}}
+                    </ul>
+                    {{ end }}
+                </div>
 
-                {{ with .Site.Menus.main }}
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    {{ range sort . "Weight" }}
-                    <li class="nav-item">
-                        <a class="nav-link {{if $section.IsMenuCurrent "main" . }}active{{end}}" aria-current="page"
-                            href="{{ .URL }}">
-                            {{ .Name }}
-                        </a>
-                    </li>
-                    {{end}}
-                </ul>
-                {{ end }}
-
-                {{ if .Translations }}
-                <div class="language">
-                    <div style="text-align: right;">
-                        <ul class="language__items">
+                <div class="d-flex align-items-center">
+                    {{ if .Translations }}
+                    <div class="language me-3">
+                        <ul class="language__items d-flex list-unstyled mb-0">
                             {{ range .Translations }}
-                            <li class="language__item">
+                            <li class="language__item me-2">
                                 <a href="{{.Permalink}}" class="{{.Language}}">{{.Language.LanguageName | upper}}</a>
                             </li>
                             {{end}}
                         </ul>
                     </div>
+                    {{ end }}
+
+                    {{ with .Site.Params.userpage }}
+                        <a href="{{.}}" class="text-dark user-icon d-flex align-items-center text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="none" viewBox="0 0 24 24" 
+                                focusable="false" role="img" class="me-2">
+                                <path fill="black" fill-rule="evenodd" 
+                                    d="M8.25 7.5a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0M12 2.25a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5M8.288 17.288A5.25 5.25 0 0 1 17.25 21a.75.75 0 0 0 1.5 0 6.75 6.75 0 0 0-13.5 0 .75.75 0 0 0 1.5 0 5.25 5.25 0 0 1 1.538-3.712" 
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            {{ i18n "myprofile" }}
+                        </a>
+                    {{ end }}
                 </div>
-                {{ end }}
+
             </div>
         </nav>
     </div>
