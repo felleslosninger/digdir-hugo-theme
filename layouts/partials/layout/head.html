@@ -10,8 +10,24 @@
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
 
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Minify }}
+{{ with resources.Get "sass/main.scss" }}
+{{ $style := . | css.Sass $options | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
 
-<script src="https://kit.fontawesome.com/85f464b459.js" crossorigin="anonymous"></script>
+{{ if fileExists "node_modules/@digdir/designsystemet-css/dist/src/index.css" }}
+{{ $dsCss := readFile "node_modules/@digdir/designsystemet-css/dist/src/index.css" }}
+{{ $dsStyle := resources.FromString "designsystemet.css" $dsCss | resources.Minify }}
+<link rel="stylesheet" href="{{ $dsStyle.RelPermalink }}" />
+{{ end }}
+
+{{ if fileExists "themes/digdir-hugo-theme/design-tokens-build/digdir.css" }}
+{{ $themeCss := readFile "themes/digdir-hugo-theme/design-tokens-build/digdir.css" }}
+{{ $themeStyle := resources.FromString "designsystemet-theme.css" $themeCss | resources.Minify }}
+<link rel="stylesheet" href="{{ $themeStyle.RelPermalink }}" />
+{{ end }}
+
+{{ $script := resources.Get "js/main.js" | js.Build (dict "minify" true) }}
+<script src="{{ $script.RelPermalink }}" defer></script>
+
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
