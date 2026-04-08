@@ -1,1 +1,16 @@
 
+<script>
+	function applyDsLinkClass() {
+		var links = document.querySelectorAll("a:not(.ds-link)");
+		for (var i = 0; i < links.length; i++) {
+			links[i].classList.add("ds-link");
+		}
+	}
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", applyDsLinkClass);
+	} else {
+		applyDsLinkClass();
+	}
+</script>
+
